@@ -4,12 +4,12 @@ cpp-range
 generate ranges for loops
 
 Description
-===========
+----------- 
 
 Header-only library to ease looping over a specific range.
 
 Examples
-========
+--------
 
     #include "range.hpp"
 
@@ -25,13 +25,13 @@ Examples
 
 
 Usage
-=====
+-----
 
 * `include` the header file
 * Compile your executable/library with `-std=c++11`
     * (for now, this is a C++11-only header, but could easily be changed)
 
 License
-=======
+-------
 
 WTFPL
