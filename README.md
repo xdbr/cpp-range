@@ -31,6 +31,11 @@ Usage
 * Compile your executable/library with `-std=c++11`
     * (for now, this is a C++11-only header, but could easily be changed)
 
+Tests
+-----
+
+Run `rake clobber; rake`
+
 License
 -------
 
