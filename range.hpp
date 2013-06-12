@@ -25,8 +25,8 @@ public:
     range(T begin, T end, T step = 1)
         : begin_(begin), end_(end), step_(step)
         {
-            for (T i = begin_; i <= end_; i += step_) {
-                list_.push_back(i);
+            for (; begin_ <= end_; begin_ += step_) {
+                list_.push_back(begin_);
             }
         }
     inline auto begin() -> decltype(list_.begin()) { return list_.begin(); }
