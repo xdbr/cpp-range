@@ -6,14 +6,20 @@
 */
 
 #include <list>
+#include <type_traits>
 
-// TODO: better yet, return generators (function pointers)...
+// TODO
+// [ ] return generators (function pointers)...
+// [X] enable_if only for arithmetic types.
+// [ ] templatize for other containers than list (or return generators)
+
+template<class T, class Enable = void>
+class range; // undefined
 
 template <class T>
-class range {
-    T               begin_;
-    T               end_;
-    T               step_;
+class range<T, typename std::enable_if<std::is_arithmetic<T>::value >::type>
+{
+    T               begin_, end_, step_;
     std::list<T>    list_;
 public:
     range(T begin, T end, T step = 1)

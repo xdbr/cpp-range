@@ -10,7 +10,7 @@
 #include <iostream>
 #include <cassert>
 #include <list>
-
+#include <string>
 /* Compile with -D_TEST_DEBUG to see output */
 // #define _TEST_DEBUG
 
@@ -48,6 +48,11 @@ int main() {
     #endif /* _TEST_DEBUG */
     assert( list_long == range<long>(-2, 2).get() );
 
+
+    // Not instantiable:
+    // range<std::string>("a", "z", 1)) {
+
     std::cout << "All tests successful." << std::endl;
+    
     return 0;
 }
