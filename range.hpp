@@ -1,3 +1,6 @@
+#ifndef RANGE_HPP
+#define RANGE_HPP
+
 /*
 
     range.hpp
@@ -12,6 +15,8 @@
 // [ ] return generators (function pointers)...
 // [X] enable_if only for arithmetic types.
 // [ ] templatize for other containers than list (or return generators)
+
+namespace util {
 
 template<class T, class Enable = void>
 class range; // undefined
@@ -33,3 +38,7 @@ public:
     inline auto end()   -> decltype(list_.end())   { return list_.end();   }
     inline auto get()   -> decltype(list_)         { return list_; }
 };
+
+} /* end of namespace util */
+
+#endif /* end of include guard: RANGE_HPP */

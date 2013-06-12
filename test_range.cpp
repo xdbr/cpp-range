@@ -20,22 +20,22 @@ int main() {
 
     #ifdef _TEST_DEBUG
     std::cout << "Test range<int>(0, 10, 2)" << std::endl;
-    for (const auto & i : range<int>(0, 10, 2))
+    for (const auto & i : util::range<int>(0, 10, 2))
         std::cout << i << std::endl;
     #endif /* _TEST_DEBUG */
     
-    assert( list_int == range<int>(0, 10, 2).get() );
+    assert( list_int == util::range<int>(0, 10, 2).get() );
 
     // harr, harr.
     std::list<char> list_char = { 'a', 'd', 'g', 'j', 'm', 'p', 's', 'v', 'y' };
 
     #ifdef _TEST_DEBUG
     std::cout << "Test range<char>('a', 'z', 3)" << std::endl;
-    for (const auto & l :range<char>('a', 'z', 3))
+    for (const auto & l : util::range<char>('a', 'z', 3))
         std::cout << l << std::endl;
     #endif /* _TEST_DEBUG */
     
-    assert( list_char == range<char>('a', 'z', 3).get() );
+    assert( list_char == util::range<char>('a', 'z', 3).get() );
 
 
 
@@ -43,10 +43,10 @@ int main() {
     
     #ifdef _TEST_DEBUG
     std::cout << "Test range<int>(-2, 2)" << std::endl;
-    for (const auto & l : range<long>(-2, 2))
+    for (const auto & l : util::range<long>(-2, 2))
         std::cout << l << std::endl;
     #endif /* _TEST_DEBUG */
-    assert( list_long == range<long>(-2, 2).get() );
+    assert( list_long == util::range<long>(-2, 2).get() );
 
 
     // Not instantiable:
